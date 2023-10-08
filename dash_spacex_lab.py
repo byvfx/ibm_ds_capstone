@@ -93,7 +93,7 @@ def update_scatter_chart(selected_site, payload_range):
     # Filter data based on the selected payload range
     low, high = payload_range
     filtered_df = spacex_df[(spacex_df['Payload Mass (kg)'] >= low) & (spacex_df['Payload Mass (kg)'] <= high)]
-    
+    all_categories = sorted(spacex_df['Booster Version Category'].unique())
     # If a specific site is selected (not 'ALL'), filter the data further based on the site
     if selected_site != 'ALL':
         filtered_df = filtered_df[filtered_df['Launch Site'] == selected_site]
@@ -104,7 +104,8 @@ def update_scatter_chart(selected_site, payload_range):
         x='Payload Mass (kg)', 
         y='class', 
         color='Booster Version Category',
-        title=f"Correlation between Payload and Success for site {selected_site}"
+        title=f"Correlation between Payload and Success for site {selected_site}",
+        category_orders={'Booster Version Category': all_categories}
     )
     return fig
 # Run the app
