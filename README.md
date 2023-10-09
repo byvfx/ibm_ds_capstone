@@ -7,11 +7,11 @@ My final project for the Coursea IBM Data Science Certificate
 ## Table of Contents
 
 - [Objective](#objective)
-- [Data Exploratory](#data_exploratory)
-- [Data Collection](#data_collection)
-- [Predictive Data Analysis](#predictive_data_analysis)
-- [Data Visualization](#data_visualization)
-- [Present Findings](#present_findings)
+- [Data Exploratory](#data-exploratory)
+- [Data Collection](#data-collection)
+- [Predictive Data Analysis](#predictive-data-analysis)
+- [Data Visualization](#data-visualization)
+- [Present Findings](#present-findings))
   
 
 ## Objective 
