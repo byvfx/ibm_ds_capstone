@@ -14,7 +14,7 @@ My final project for the Coursea IBM Data Science Certificate
 - [Present Findings](#present-findings))
   
 
-## Objective 
+## Objective :red_circle:
 ### Space Y vs SpaceX
 
 **Space Y**, a fictional competitor to **SpaceX** (founded by the billionaire industrialist **Allon Musk**), is set to enter the aerospace market. As part of the competitive strategy:
