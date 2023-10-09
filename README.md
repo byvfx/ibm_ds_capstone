@@ -6,16 +6,18 @@ My final project for the Coursea IBM Data Science Certificate
 
 ## Table of Contents
 
-- [Objective](#objective)
-- [Data Exploratory](#data-exploratory)
-- [Data Collection](#data-collection)
-- [Predictive Data Analysis](#predictive-data-analysis)
-- [Data Visualization](#data-visualization)
-- [Present Findings](#present-findings))
-  
 
-## Objective :red_circle:
+- [1. Objective 🎯](#1-objective)
+- [2. Data Exploratory 🔍](#2-data-exploratory)
+- [3. Data Collection 🗂](#3-data-collection)
+- [4. Predictive Data Analysis 🤖](#4-predictive-data-analysis)
+- [5. Data Visualization 📊](#5-data-visualization)
+- [6. Present Findings 🎙](#6-present-findings)
+---  
+
+## 1. Objective 🎯
 ### Space Y vs SpaceX
+---
 
 **Space Y**, a fictional competitor to **SpaceX** (founded by the billionaire industrialist **Allon Musk**), is set to enter the aerospace market. As part of the competitive strategy:
 
@@ -35,14 +37,16 @@ Beyond manual analysis, I will leverage machine learning to forecast SpaceX's ac
    - Use the model to estimate if SpaceX intends to reuse the first stage for future launches.
 
 This analysis will help **Space Y** strategize its market entry and potentially outpace SpaceX in the aerospace sector.
+---
 
 
-## Data Exploratory
+## 2. Data Exploratory 🔍
+---
 
-In this phase, I'll be focusing on a crucial phase in data science: **Exploratory Data Analysis (EDA)**. My goals during this phase can be categorized into two primary objectives:
+In this phase, I'll focus on a crucial data science phase: **Exploratory Data Analysis (EDA)**. My goals during this phase can be categorized into two primary objectives:
 
 ### 1. Understanding the Dataset
-In my initial steps, I'll engage in a detailed EDA on a specific database. This exploration is intended to:
+I'll engage in a detailed EDA on a specific database in my initial steps. This exploration is intended to:
    - Familiarize myself with the intricacies of the data.
    - Identify inherent patterns.
    - Extract preliminary insights.
@@ -59,19 +63,22 @@ As I navigate this phase, I'm keen on:
    - Discovering correlations that might be hidden within the data.
    - Preparing the data for subsequent predictive modeling, which includes tasks like converting categorical data using methods like one-hot encoding.
 
-By the conclusion of this phase, I aim to spotlight essential attributes. These insights will play a pivotal role in developing a machine-learning model designed to forecast the successful landing of Falcon 9’s first stage.
+By the conclusion of this phase, I aim to spotlight essential attributes. These insights will play a pivotal role in developing a machine-learning model to forecast the successful landing of Falcon 9’s first stage.
+---
 
-## Data Collection
 
-In this phase, I'll be focusing on data collection using the **SpaceX REST API**. We're drawing from SpaceX launch data that offers details about launches, encompassing the rocket utilized, payload specifics, and both launch and landing particulars.
+## 3. Data Collection 🗂
+---
+
+In this phase, I'll focus on data collection using the **SpaceX REST API**. We're drawing from SpaceX launch data that offers details about launches, encompassing the rocket utilized, payload specifics, and launch and landing particulars.
 
 ### Objective
 
-Our primary objective is to predict if SpaceX will attempt a rocket landing based on the provided data. The data is accessed through various endpoints, but our main focus is on the endpoint `api.spacexdata.com/v4/launches/past`. To retrieve the data, a GET request is made, with the response being a list of JSON objects. Each item in this list represents an individual launch. This data can then be transformed into a more analysis-friendly flat table format using the `json_normalize` function.
+Based on the provided data, our primary objective is to predict if SpaceX will attempt a rocket landing. The data is accessed through various endpoints, but our main focus is on the endpoint `api.spacexdata.com/v4/launches/past`. A GET request is made to retrieve the data, with the response being a list of JSON objects. Each item in this list represents an individual launch. This data can then be transformed into a more analysis-friendly flat table format using the `json_normalize` function.
 
 ### Additional Data Sources
 
-Additionally, Falcon 9 Launch data can be gathered by web scraping specific Wiki pages. Here, the **Python BeautifulSoup package** proves invaluable, helping to extract data from HTML tables, which is then parsed into a Pandas data frame.
+Web scraping specific Wiki pages can gather Falcon 9 Launch data. Here, the **Python BeautifulSoup package** proves invaluable, helping to extract data from HTML tables, which is then parsed into a Pandas data frame.
 
 ### Data Refinement Steps:
 
@@ -85,19 +92,22 @@ Additionally, Falcon 9 Launch data can be gathered by web scraping specific Wiki
    - Inconsistencies in the data manifest as NULL values, especially in the PayloadMass column. One strategy to handle this is by determining the mean of the PayloadMass entries and substituting the null spots with this mean value.
    - The 'LandingPad' column, which uses NULL values to denote the non-use of a landing pad, will be addressed later with one-hot encoding techniques.
 
-By the end of this phase, the goal is to have a structured and insightful dataset, optimized for further analysis.
+By the end of this phase, the goal is to have a structured and insightful dataset optimized for further analysis.
+---
 
-## Predictive Data Analysis
 
-In this segment, we'll dive deep into **Predictive Analysis**. Our focus will be on constructing a machine-learning pipeline aimed at predicting the successful landing of Falcon 9's first stage. The key steps in this journey are:
+## 4. Predictive Data Analysis 🤖
+---
+
+In this segment, we'll dive deep into **Predictive Analysis**. I will focus on constructing a machine-learning pipeline to predict the successful landing of Falcon 9's first stage. The key steps in this journey are:
 
 ### 1. Preprocessing
 - Standardizing the data ensures that the dataset is consistent and free from any outliers or discrepancies.
 
 ### 2. Data Splitting
 - Leveraging `Train_test_split` to segregate the data into:
-  - Training data, used to train the model.
-  - Testing data, used to evaluate the model's performance.
+  - Training data used to train the model.
+  - Testing data used to evaluate the model's performance.
 
 ### 3. Model Training & Hyperparameter Tuning
 - Training our model on the available data.
@@ -109,16 +119,17 @@ Multiple algorithms will be tested to identify the most accurate:
    - Support Vector Machines
    - Decision Tree Classifier
    - K-Nearest Neighbors
-Using the best hyperparameter configurations, we'll determine which model performs the best with our training data.
+Using the best hyperparameter configurations, I will determine which model performs the best with our training data.
 
 ### 5. Evaluation
 - The final step involves visualizing the results using a **confusion matrix**, offering a clear picture of the model's accuracy and areas of potential improvement.
 
-This structured approach ensures a comprehensive analysis, helping in making informed decisions based on data-driven insights.
+This structured approach ensures a comprehensive analysis, helping make decisions based on data-driven insights.
 
-## Data Visualization
+## 5. Data Visualization 📊
+---
 
-Throughout our exchange, we delved into multiple facets of data science, spanning from **Exploratory Data Analysis (EDA)** to **Predictive Analysis**. At the heart of these processes lies the pivotal role of **Data Visualization**.
+Throughout our exchange, I delved into multiple facets of data science, from **Exploratory Data Analysis (EDA)** to **Predictive Analysis**. At the heart of these processes lies the pivotal role of **Data Visualization**.
 
 ### 1. Understanding the Data
 
@@ -126,7 +137,7 @@ Throughout our exchange, we delved into multiple facets of data science, spannin
 
 ### 2. Dashboard Creation
 
-- For competitors, such as the fictional entity **Space Y**, aiming to challenge stalwarts like **SpaceX**, the utility of dashboards is undeniable. These dashboards, powered by compelling visualizations, provide concise snapshots of crucial metrics, guiding teams towards informed decisions.
+- The utility of dashboards is undeniable for competitors, such as the fictional entity **Space Y**, aiming to challenge stalwarts like **SpaceX**. Powered by compelling visualizations, these dashboards provide concise snapshots of crucial metrics, guiding teams toward informed decisions.
 
 ### 3. Machine Learning & Predictive Analysis
 
@@ -134,12 +145,13 @@ Throughout our exchange, we delved into multiple facets of data science, spannin
 
 ### 4. Model Selection & Evaluation
 
-- When juxtaposing multiple algorithms, such as Logistic Regression, Support Vector Machines, or Decision Tree Classifiers, visual comparisons streamline the model selection process. Visual aids crisply demonstrate which model has the edge over others based on specific evaluation metrics.
+- Visual comparisons streamline the model selection process when juxtaposing multiple algorithms, such as Logistic Regression, Support Vector Machines, or Decision Tree Classifiers. Visual aids crisply demonstrate which model has the edge over others based on specific evaluation metrics.
 
-In summary, while raw data and intricate algorithms constitute the structural foundation of data science, **data visualization** infuses these numbers with meaning, translating them into tangible insights. Whether the task at hand involves evaluating SpaceX's launch triumphs or crafting predictive models for imminent rocket landings, adept data visualization bridges the chasm between intricate data sets and actionable insights.
+In summary, while raw data and intricate algorithms constitute the structural foundation of data science, **data visualization** infuses these numbers with meaning, translating them into tangible insights. Whether the task involves evaluating SpaceX's launch triumphs or crafting predictive models for imminent rocket landings, adept data visualization bridges the chasm between intricate data sets and actionable insights.
+---
 
-## Present Findings
-
+## 6. Present Findings 🎙
+---
 
 In presenting my work, I recognize the transformative **power** of effective communication. As I navigate this journey, here are the key pillars I'm focusing on:
 
@@ -163,7 +175,7 @@ In presenting my work, I recognize the transformative **power** of effective com
 ### 4. **Crafting a Strong Narrative**
 
 - I weave a compelling narrative around my data and discoveries.
-- I highlight challenges, processes, and outcomes to take my audience on a journey.
+- I highlight challenges, processes, and outcomes to guide my audience.
 
 ### 5. **Leveraging the Power of Simplicity**
 
